@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+:root {
+  --font-xs: 14px;
+  --font-sm: 16px;
+  --font-md: 24px;
+  --font-lg: 40px;
+  --font-xl: 55px;
+  --color-green: #1AD079;
+  --color-dark-blue: #07133B;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 1199.98px) {
+  :root {
+    --font-xs: 14px;
+    --font-sm: 14px;
+    --font-md: 20px;
+    --font-lg: 32px;
+    --font-xl: 40px;
   }
 }
+@media (max-width: 767.98px) {
+  :root {
+    --font-xs: 12px;
+    --font-sm: 12px;
+  }
+}
+@media (max-width: 575.98px) {
+  :root {
+    --font-xs: 14px;
+    --font-sm: 13px;
+    --font-md: 20px;
+    --font-lg: 28px;
+    --font-xl: 30px;
+  }
+}
+body {
+  background: var(--color-white) url("./assets/img/shadow_img.png");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.fs_xs {
+  font-size: var(--font-xs) !important;
+}
+.fs_sm {
+  font-size: var(--font-sm) !important;
+}
+.fs_md {
+  font-size: var(--font-md) !important;
+}
+.fs_lg {
+  font-size: var(--font-lg) !important;
+}
+.fs_xl {
+  font-size: var(--font-xl) !important;
+}
+.text_white {
+  color: var(--color-white) !important;
+}
+.opacity_07 {
+  opacity: 0.7 !important;
+}
+.cursor_pointer {
+  cursor: pointer;
+}
+.br_15 {
+  border-radius: 15px;
+}
+.footer_logo {
+  max-width: 200px;
+}
+.bottom_line{
+  position: absolute;
+width: 1290px;
+height: 0px;
+left: -77px;
+top: 335px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+opacity: 0.1;
+border: 3px solid rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 767.98px) {
+  .footer_logo {
+    max-width: 130px;
+  }
+}
+.z_index_10{
+  z-index: 10;
+}
+.z_index_n_1{
+  z-index: -1;
+}
+div.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+div.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blur_img{
+  right: 0;
+    top: -110px;
+    max-width: 480px;
+    z-index: -1;
 }
